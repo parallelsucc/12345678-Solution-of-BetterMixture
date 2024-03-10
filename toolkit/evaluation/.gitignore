@@ -1,0 +1,11 @@
+env
+*.pyc
+data/
+lm_cache
+.idea
+
+*.egg-info/
+build/
+
+eval-details/
+eval-results/

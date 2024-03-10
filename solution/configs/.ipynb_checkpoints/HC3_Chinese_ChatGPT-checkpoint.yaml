@@ -1,0 +1,20 @@
+# Process config example for dataset
+
+# global parameters
+project_name: 'HC3_Chinese_ChatGPT'
+dataset_path: './input/HC3_Chinese_ChatGPT.jsonl'  # path to your dataset directory or file
+np: 4  # number of subprocess to process your dataset
+
+export_path: './output/analysis/HC3_Chinese_ChatGPT/HC3_Chinese_ChatGPT.jsonl'
+
+# process schedule
+# a list of several process operators with their arguments
+process:
+  - language_id_score_filter:
+      lang: 'zh'
+      
+  - normal_filter:
+  - token_num_filter:
+     hf_tokenizer: "baichuan-inc/Baichuan2-7B-Base"
+     min_num: 10
+     max_num: 4000

@@ -1,0 +1,22 @@
+# Process config example for dataset
+
+# global parameters
+project_name: 'instruct'
+dataset_path: './input/instruct.jsonl'  # path to your dataset directory or file
+np: 4  # number of subprocess to process your dataset
+
+export_path: './output/analysis/instruct/instruct.jsonl'
+
+# process schedule
+# a list of several process operators with their arguments
+process:
+  - language_id_score_filter:
+      lang: 'en'
+      min_score: 0.7
+  - normal_filter:
+  - perplexity_filter:
+      max_ppl: 1170.6
+  - token_num_filter:
+     hf_tokenizer: "baichuan-inc/Baichuan2-7B-Base"
+     min_num: 1000
+     max_num: 4000
