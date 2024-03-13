@@ -61,7 +61,7 @@
 | Summarization      | 4.568930       |
 
 #### 目录结构
---analysis 使用 data-juicer 对 input 的分析结果
+--analysis 使用 data-juicer 对 input 的分析结果  
 --filtered_data 普通筛选后的 HC3_ChatGPT 和 instruct  
 --filtered_mathdata 数学筛选后的 gpt4all 和 instruct  
 --output  
