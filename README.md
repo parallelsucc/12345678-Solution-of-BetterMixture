@@ -60,3 +60,18 @@
 | Chinese Knowledge   | 1.003039        |
 | Summarization      | 4.568930       |
 
+#### 目录结构
+--filtered_data 普通筛选后的 HC3_ChatGPT 和 instruct  
+--filtered_mathdata 数学筛选后的 gpt4all 和 instruct  
+--output  
+&nbsp;&nbsp;--evals 初赛评估结果  
+&nbsp;&nbsp;--lora_model 模型权重  
+&nbsp;&nbsp;--sft_data get_mixture 混合结果  
+--solution  
+&nbsp;&nbsp;--configs 配置文件
+&nbsp;&nbsp;--math_configs 筛选数学的配置文件  
+--toolkit  
+&nbsp;&nbsp;--data-juicer  
+&nbsp;&nbsp;--evaluation  
+&nbsp;&nbsp;--training  
+
