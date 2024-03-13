@@ -1,0 +1,51 @@
+# Process config example for dataset
+
+# global parameters
+project_name: 'instinwild_ch'
+dataset_path: './input/instinwild_ch.jsonl'  # path to your dataset directory or file
+np: 4  # number of subprocess to process your dataset
+
+export_path: './output/analysis/instinwild_ch/instinwild_ch.jsonl'
+
+# process schedule
+# a list of several process operators with their arguments
+process:
+  - text_length_filter:
+      min_len: 1
+      max_len: 4096
+    
+  - language_id_score_filter:
+      lang: 'zh'
+      
+  - perplexity_filter:
+      lang: 'zh'
+      max_ppl: 1500
+      
+  - text_length_filter:
+      min_len: 1.0
+      max_len: 10000
+  # - token_num_filter:
+  #     hf_tokenizer: "baichuan-inc/Baichuan2-7B-Base"
+  #     min_num: 1
+  #     max_num: 1024
+  # - word_num_filter:
+  
+  - alphanumeric_filter:
+      tokenization: False
+      min_ratio: 0.8
+      max_ratio: 1.0
+  
+  - character_repetition_filter:
+      rep_len: 10
+      min_ratio: 0.0 
+      max_ratio: 0.3
+      
+  - word_repetition_filter:
+      lang: 'zh'
+      tokenization: False
+      rep_len: 10
+      min_ratio: 0.0
+      max_ratio: 0.5
+    
+  # - text_entity_dependency_filter
+      
