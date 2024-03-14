@@ -69,7 +69,7 @@
 &nbsp;&nbsp;--lora_model 模型权重  
 &nbsp;&nbsp;--sft_data get_mixture 混合结果  
 --solution  
-&nbsp;&nbsp;--configs 配置文件
+&nbsp;&nbsp;--configs 配置文件  
 &nbsp;&nbsp;--math_configs 筛选数学的配置文件  
 --toolkit  
 &nbsp;&nbsp;--data-juicer  
