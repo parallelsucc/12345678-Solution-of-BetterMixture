@@ -1,4 +1,4 @@
-## TODO：更新迭代实验记录及相关分析
+## 报告及详细实验记录(更新于2024/03/23)：[here](https://github.com/parallelsucc/12345678-Solution-of-BetterMixture)
 
 ### 1. 添加筛选数学的算子
     math_num_filter.py
